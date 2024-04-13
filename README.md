@@ -1,42 +1,30 @@
-<h1><img src="https://google.github.io/zx/img/logo.svg" alt="Zx logo" height="32" valign="middle"> zx</h1>
+# kokona
 
-```js
-#!/usr/bin/env zx
+This is a fork version of [`zx`](https://github.com/google/zx), it used for TypeScript runtime.
 
-await $`cat package.json | grep name`
+### Motivation
 
-let branch = await $`git branch --show-current`
-await $`dep deploy --branch=${branch}`
+We often use [`tsx`](https://github.com/esbuild-kit/tsx) to execute `.ts` scripts instead of `.js` scripts. however, `zx` v8 bundles everything, and top-level await doesn't work in CJS module scripts. this package solves this issue.
 
-await Promise.all([
-  $`sleep 1; echo 1`,
-  $`sleep 2; echo 2`,
-  $`sleep 3; echo 3`,
-])
-
-let name = 'foo bar'
-await $`mkdir /tmp/${name}`
-```
-
-Bash is great, but when it comes to writing more complex scripts,
-many people prefer a more convenient programming language.
-JavaScript is a perfect choice, but the Node.js standard library
-requires additional hassle before using. The `zx` package provides
-useful wrappers around `child_process`, escapes arguments and
-gives sensible defaults.
-
-## Install
+### Example
 
 ```bash
-npm install zx
+  pnpm i -D kokona
 ```
 
-## Documentation
+```ts
+// script.ts
 
-Read documentation on [google.github.io/zx](https://google.github.io/zx/).
+import 'kokona/global'
 
-## License
+const run = async () => {
+  await $`echo "Hello, World!"`
+}
 
-[Apache-2.0](LICENSE)
+run()
+```
 
-Disclaimer: _This is not an officially supported Google product._
+```bash
+  pnpm tsx script.ts
+```
+

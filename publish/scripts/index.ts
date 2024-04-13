@@ -133,6 +133,11 @@ const run = async () => {
     }
   })
   console.log('all fields are correct')
+
+  // replace origin readme
+  const originReadmePath = path.join(root, './README.md')
+  const newReadmePath = path.join(newRoot, './README.md')
+  fs.copySync(newReadmePath, originReadmePath)
 }
 
 run()
