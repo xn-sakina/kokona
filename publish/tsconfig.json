@@ -1,8 +1,8 @@
 {
-    "extends": "@xn-sakina/mental/lib-native-esm",
-    "compilerOptions": {
-        "outDir": "./build",
-        "declaration": true,
-    },
-    "include": ["src"]
+  "extends": "@xn-sakina/mental/lib-native-esm",
+  "compilerOptions": {
+    "outDir": "./build",
+    "declaration": true
+  },
+  "include": ["src"]
 }
