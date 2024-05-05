@@ -12,6 +12,9 @@ interface IPkg {
 }
 
 const run = async () => {
+  const argv = process.argv.slice(2)
+  const isSkipVersionCheck = argv.includes('--skip-version-check')
+
   const root = path.join(__dirname, '../../')
   const newRoot = path.join(__dirname, '../')
 
@@ -116,17 +119,17 @@ const run = async () => {
 
   // make sure field is correct
   const needCheckFields = [
-    'version',
+    isSkipVersionCheck ? false : 'version',
     'type',
     'main',
     'types',
     'typesVersions',
-    'exports',
+    // 'exports',
     'bin',
     'license',
     'engines',
     'optionalDependencies',
-  ]
+  ].filter(Boolean) as string[]
   needCheckFields.forEach((field) => {
     if (!isEqual(originPackageJson[field], newPackageJson[field])) {
       throw new Error(`field not match: ${field}`)

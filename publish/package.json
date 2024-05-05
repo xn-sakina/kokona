@@ -1,6 +1,6 @@
 {
   "name": "kokona",
-  "version": "8.0.2",
+  "version": "8.0.2-dev.086b500",
   "description": "zx's fork version for TypeScript runtime",
   "homepage": "https://github.com/xn-sakina/kokona#README",
   "repository": {
@@ -55,7 +55,7 @@
     "@types/node": ">=20.12.5"
   },
   "engines": {
-    "node": ">= 16.0.0"
+    "node": ">= 12.0.0"
   },
   "dependencies": {
     "@webpod/ingrid": "^0.0.0-beta.3",
@@ -67,7 +67,9 @@
     "minimist": "^1.2.8",
     "node-fetch-native": "^1.6.4",
     "which": "^4.0.0",
-    "yaml": "^2.4.1"
+    "yaml": "^2.4.1",
+    "node-abort-controller": "^3.1.1",
+    "create-require": "^1.1.1"
   },
   "devDependencies": {
     "@types/lodash": "^4.17.0",
