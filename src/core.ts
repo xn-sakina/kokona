@@ -117,9 +117,17 @@ export function usePowerShell() {
   $.quote = quotePowerShell
 }
 
+export function usePwsh() {
+  $.shell = which.sync('pwsh')
+  $.prefix = ''
+  $.postfix = '; exit $LastExitCode'
+  $.quote = quotePowerShell
+}
+
 export function useBash() {
   $.shell = which.sync('bash')
   $.prefix = 'set -euo pipefail;'
+  $.postfix = ''
   $.quote = quote
 }
 
