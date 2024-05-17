@@ -34,7 +34,8 @@
     "./package.json": "./package.json"
   },
   "bin": {
-    "zx": "./build/cli.js"
+    "zx": "./build/cli.js",
+    "kokona": "./build/cli.js"
   },
   "keywords": [
     "zx",
