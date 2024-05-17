@@ -9,6 +9,7 @@ interface IPkg {
   version: string
   devDependencies: Record<string, string>
   dependencies: Record<string, string>
+  bin: Record<string, string>
 }
 
 const run = async () => {
@@ -125,7 +126,6 @@ const run = async () => {
     'types',
     'typesVersions',
     // 'exports',
-    'bin',
     'license',
     'engines',
     'optionalDependencies',
@@ -135,6 +135,12 @@ const run = async () => {
       throw new Error(`field not match: ${field}`)
     }
   })
+  // check `bin`
+  const oldBin = originPackageJson.bin
+  const newBin = newPackageJson.bin
+  if (oldBin.zx !== newBin.zx) {
+    throw new Error('bin not match')
+  }
   console.log('all fields are correct')
 
   // replace origin readme
