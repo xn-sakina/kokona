@@ -39,16 +39,16 @@ dependencies:
     specifier: ^4.0.0
     version: 4.0.0
   yaml:
-    specifier: ^2.4.1
-    version: 2.4.1
+    specifier: ^2.4.2
+    version: 2.4.2
 
 optionalDependencies:
   '@types/fs-extra':
     specifier: ^11.0.4
     version: 11.0.4
   '@types/node':
-    specifier: '>=20.12.5'
-    version: 20.12.7
+    specifier: '>=20.12.11'
+    version: 20.12.12
 
 devDependencies:
   '@types/lodash':
@@ -313,7 +313,7 @@ packages:
     requiresBuild: true
     dependencies:
       '@types/jsonfile': 6.1.4
-      '@types/node': 20.12.7
+      '@types/node': 20.12.12
     dev: false
     optional: true
 
@@ -321,7 +321,7 @@ packages:
     resolution: {integrity: sha512-D5qGUYwjvnNNextdU59/+fI+spnwtTFmyQP0h+PfIOSkNfpU6AOICUOkm4i0OnSk+NyjdPJrxCDro0sJsWlRpQ==, tarball: https://registry.npmjs.org/@types/jsonfile/-/jsonfile-6.1.4.tgz}
     requiresBuild: true
     dependencies:
-      '@types/node': 20.12.7
+      '@types/node': 20.12.12
     dev: false
     optional: true
 
@@ -329,8 +329,8 @@ packages:
     resolution: {integrity: sha512-t7dhREVv6dbNj0q17X12j7yDG4bD/DHYX7o5/DbDxobP0HnGPgpRz2Ej77aL7TZT3DSw13fqUTj8J4mMnqa7WA==, tarball: https://registry.npmjs.org/@types/lodash/-/lodash-4.17.0.tgz}
     dev: true
 
-  /@types/node@20.12.7:
-    resolution: {integrity: sha512-wq0cICSkRLVaf3UGLMGItu/PtdY7oaXaI/RVU+xliKVOtRna3PRY57ZDfztpDL0n11vfymMUnXv8QwYCO7L1wg==, tarball: https://registry.npmjs.org/@types/node/-/node-20.12.7.tgz}
+  /@types/node@20.12.12:
+    resolution: {integrity: sha512-eWLDGF/FOSPtAvEqeRAQ4C8LSA7M1I7i0ky1I8U7kD1J5ITyW3AsRhQrKVoWf5pFKZ2kILsEGJhsI9r93PYnOw==, tarball: https://registry.npmjs.org/@types/node/-/node-20.12.12.tgz}
     requiresBuild: true
     dependencies:
       undici-types: 5.26.5
@@ -822,8 +822,8 @@ packages:
       isexe: 3.1.1
     dev: false
 
-  /yaml@2.4.1:
-    resolution: {integrity: sha512-pIXzoImaqmfOrL7teGUBt/T7ZDnyeGBWyXQBvOVhLkWLN37GXv8NMLK406UY6dS51JfcQHsmcW5cJ441bHg6Lg==, tarball: https://registry.npmjs.org/yaml/-/yaml-2.4.1.tgz}
+  /yaml@2.4.2:
+    resolution: {integrity: sha512-B3VqDZ+JAg1nZpaEmWtTXUlBneoGx6CPM9b0TENK6aoSu5t73dItudwdgmi6tHlIZZId4dZ9skcAQ2UbcyAeVA==, tarball: https://registry.npmjs.org/yaml/-/yaml-2.4.2.tgz}
     engines: {node: '>= 14'}
     hasBin: true
     dev: false
